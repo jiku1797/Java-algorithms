@@ -1,28 +1,15 @@
 // Building a binary search tree and finding its minimum value
 
-public class Node {
+class Node {
 	public int data;
 	Node left, right;
 	
 	Node(int data){
 		this.data = data;
 	}
-	
-	public static void main(String[] args){
-		BinaryTree tree = new BinaryTree();
-		Node rootNode = new Node(8);
-		tree.insert(rootNode, 4);
-		tree.insert(rootNode, 2);
-        tree.insert(rootNode, 7);
-        tree.insert(rootNode, 3);
-        tree.insert(rootNode, 6);
-        tree.insert(rootNode, 5);
-        
-        System.out.println("Minimum value is " + tree.minValue(rootNode));
-	}
 }
 
-class BinaryTree{
+public class BinaryTree{
 	
 	public Node insert(Node node, int data){
 		if(node == null){
@@ -46,5 +33,18 @@ class BinaryTree{
 			current = current.left;
 		}
 		return current.data;
-	}	
+	}
+	
+	public static void main(String[] args){
+		BinaryTree tree = new BinaryTree();
+		Node rootNode = new Node(8);
+		tree.insert(rootNode, 4);
+		tree.insert(rootNode, 2);
+        	tree.insert(rootNode, 7);
+		tree.insert(rootNode, 3);
+		tree.insert(rootNode, 6);
+        	tree.insert(rootNode, 5);
+        
+        	System.out.println("Minimum value is " + tree.minValue(rootNode));
+	}
 }
